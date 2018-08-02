@@ -2,68 +2,35 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="132604" started-at="2017-08-28T10:58:05Z" finished-at="2017-08-28T11:00:17Z">
+  <suite name="Default suite" duration-ms="35680" started-at="2018-07-26T07:37:00Z" finished-at="2018-07-26T07:37:35Z">
     <groups>
     </groups>
-    <test name="FF Test" duration-ms="132604" started-at="2017-08-28T10:58:05Z" finished-at="2017-08-28T11:00:17Z">
-      <class name="com.ctli.it.testcases.NaukriTestCase1">
-        <test-method status="PASS" signature="initialSetUp()[pri:0, instance:com.ctli.it.testcases.NaukriTestCase1@7a1ebcd8]" name="initialSetUp" is-config="true" duration-ms="450" started-at="2017-08-28T16:28:04Z" finished-at="2017-08-28T16:28:05Z">
+    <test name="Default test" duration-ms="35680" started-at="2018-07-26T07:37:00Z" finished-at="2018-07-26T07:37:35Z">
+      <class name="com.ctli.it.scenarios.Amazon_Webscenario">
+        <test-method status="PASS" signature="initialSetUp()[pri:0, instance:com.ctli.it.scenarios.Amazon_Webscenario@5faeada1]" name="initialSetUp" is-config="true" duration-ms="303" started-at="2018-07-26T13:06:59Z" finished-at="2018-07-26T13:07:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetUp -->
-        <test-method status="PASS" signature="launchApp(java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:com.ctli.it.testcases.NaukriTestCase1@7a1ebcd8]" name="launchApp" is-config="true" duration-ms="27088" started-at="2017-08-28T16:28:05Z" finished-at="2017-08-28T16:28:32Z">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:com.ctli.it.scenarios.Amazon_Webscenario@5faeada1]" name="initializeDriver" is-config="true" duration-ms="1903" started-at="2018-07-26T13:07:00Z" finished-at="2018-07-26T13:07:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method status="PASS" signature="WebPage_Scenario()[pri:0, instance:com.ctli.it.scenarios.Amazon_Webscenario@5faeada1]" name="WebPage_Scenario" duration-ms="33766" started-at="2018-07-26T13:07:01Z" finished-at="2018-07-26T13:07:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebPage_Scenario -->
+        <test-method status="PASS" signature="afterSuite(org.testng.xml.XmlTest)[pri:0, instance:com.ctli.it.scenarios.Amazon_Webscenario@5faeada1]" name="afterSuite" is-config="true" duration-ms="1" started-at="2018-07-26T13:07:35Z" finished-at="2018-07-26T13:07:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.ctli.it.testcases.NaukriTestCase1.test() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[Test: "FF Test" verbose:1[parameters:browser=>FF][metagroups:] [included: ][excluded: ]  classes:[XmlClass class=com.ctli.it.testcases.NaukriTestCase1]  packages:] ]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.ctli.it.testcases.NaukriTestCase1@7a1ebcd8]" name="test" duration-ms="100990" started-at="2017-08-28T16:28:32Z" finished-at="2017-08-28T16:30:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="closeApp(java.lang.reflect.Method, org.testng.xml.XmlTest, org.testng.ITestResult)[pri:0, instance:com.ctli.it.testcases.NaukriTestCase1@7a1ebcd8]" name="closeApp" is-config="true" duration-ms="4510" started-at="2017-08-28T16:30:13Z" finished-at="2017-08-28T16:30:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.ctli.it.testcases.NaukriTestCase1.test() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[Test: "FF Test" verbose:1[parameters:browser=>FF][metagroups:] [included: ][excluded: ]  classes:[XmlClass class=com.ctli.it.testcases.NaukriTestCase1]  packages:] ]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=NaukriTestCase1.test()[pri:0, instance:com.ctli.it.testcases.NaukriTestCase1@7a1ebcd8] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="afterSuite(org.testng.xml.XmlTest)[pri:0, instance:com.ctli.it.testcases.NaukriTestCase1@7a1ebcd8]" name="afterSuite" is-config="true" duration-ms="323" started-at="2017-08-28T16:30:17Z" finished-at="2017-08-28T16:30:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Test: "FF Test" verbose:1[parameters:browser=>FF][metagroups:] [included: ][excluded: ]  classes:[XmlClass class=com.ctli.it.testcases.NaukriTestCase1]  packages:] ]]>
+                <![CDATA[[Test: "Default test" verbose:2[parameters:][metagroups:] [included: ][excluded: ]  classes:[XmlClass class=com.ctli.it.scenarios.Amazon_Webscenario]  packages:] ]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.ctli.it.testcases.NaukriTestCase1 -->
-    </test> <!-- FF Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.ctli.it.scenarios.Amazon_Webscenario -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

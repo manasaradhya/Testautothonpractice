@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <parameter name="browser" value="FF"/>
-  <test name="FF Test(failed)">
-    <parameter name="browser" value="FF"/>
+<suite name="Failed suite [Suite]" parallel="classes">
+  <parameter name="browser" value="appium"/>
+  <test name="Mobile Test(failed)" parallel="classes">
+    <parameter name="browser" value="appium"/>
     <classes>
-      <class name="com.ctli.it.testcases.NaukriTestCase1">
+      <class name="com.ctli.it.testcases.Ghost_WebScenario2">
         <methods>
+          <include name="launchApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- com.ctli.it.testcases.Ghost_WebScenario2 -->
+      <class name="com.ctli.it.testcases.Ghost_WebScenario3">
+        <methods>
+          <include name="launchApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- com.ctli.it.testcases.Ghost_WebScenario3 -->
+      <class name="com.ctli.it.testcases.Ghost_WebScenario1">
+        <methods>
+          <include name="launchApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- com.ctli.it.testcases.Ghost_WebScenario1 -->
+      <class name="com.ctli.it.mobiletestcase.Ghost_MobileScenario">
+        <methods>
+          <include name="Mobile_Scenario"/>
           <include name="initialSetUp"/>
           <include name="launchApp"/>
-          <include name="afterSuite"/>
-          <include name="closeApp"/>
-          <include name="test"/>
         </methods>
-      </class> <!-- com.ctli.it.testcases.NaukriTestCase1 -->
+      </class> <!-- com.ctli.it.mobiletestcase.Ghost_MobileScenario -->
+      <class name="com.ctli.it.testcases.Ghost_WebScenario4">
+        <methods>
+          <include name="launchApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- com.ctli.it.testcases.Ghost_WebScenario4 -->
     </classes>
-  </test> <!-- FF Test(failed) -->
+  </test> <!-- Mobile Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

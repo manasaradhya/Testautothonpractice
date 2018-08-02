@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ctli.it.testcases.NaukriTestCase1">
+      <class name="com.ctli.it.scenarios.Amazon_Webscenario">
         <methods>
           <include name="initialSetUp"/>
-          <include name="launchApp"/>
-          <include name="test"/>
+          <include name="afterSuite"/>
+          <include name="WebPage_Scenario"/>
+          <include name="initializeDriver"/>
         </methods>
-      </class> <!-- com.ctli.it.testcases.NaukriTestCase1 -->
+      </class> <!-- com.ctli.it.scenarios.Amazon_Webscenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -200,7 +200,6 @@ public class BaseClass {
 			WebDriverWait dWait = new WebDriverWait(driver, TIME_OUT);
 			elm = dWait.until(ExpectedConditions.elementToBeClickable(elm));
 			elm.click();
-			System.out.println("clicked Done");
 			testReport.log(LogStatus.INFO,"successfully clicked on element");
 		} catch (Exception e) {
 			fail("Failed click " + elm.getTagName() + " with Exception: " + e.getMessage());
@@ -397,8 +396,7 @@ public class BaseClass {
 	
 //..............................colour verification.......................
 	public  void verifyElementColor(WebElement element,String eHexColor)
-	{
-		
+	{	
 		String strRGB=element.getCssValue("color");
 		System.out.println(strRGB);
 		String hex=convertRGBtoHex(strRGB);	
@@ -414,7 +412,6 @@ public class BaseClass {
 			System.out.println("not verified");
 		}
 	}
-	
 	
 	public  String convertRGBtoHex(String strRGB)
 	{
@@ -465,8 +462,7 @@ public class BaseClass {
 	}
 	
 	public void sentAnEmail()
-	{
-	       
+	{       
 	       final String fromMail =ReadPropertyFile.getPropertyValue("FromEmail");
 	       final String tomail=ReadPropertyFile.getPropertyValue("TOEMAIL");
 	       String pwd=ReadPropertyFile.getPropertyValue("PASSWORD");
@@ -501,11 +497,7 @@ public class BaseClass {
 	       message.setRecipients(Message.RecipientType.TO, recipientAddress);
 
 	       message.setRecipient(Message.RecipientType.CC, new InternetAddress(cc));
-	       
 	        
-	       
-	       
-	       
 	       message.setSubject(subject);
 	       MimeBodyPart messageBodyPart = new MimeBodyPart();
 	       messageBodyPart.setText(emailText);
@@ -1255,7 +1247,7 @@ public class BaseClass {
 				driver.switchTo().window(parentName);
 			}
 			
-		       public ArrayList<String> getstringarraylist(By by){                  // Return String arraylist text of the Webelements
+		   public ArrayList<String> getstringarraylist(By by){                  // Return String arraylist text of the Webelements
 		              List<WebElement> WebElements=driver.findElements(by);
 		              
 		              ArrayList<String> Fieldtext=new ArrayList<String>();
@@ -1267,7 +1259,5 @@ public class BaseClass {
 		              
 		              return Fieldtext;
 		       }
-		
-			
-		
+
 }

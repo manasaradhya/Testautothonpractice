@@ -9,6 +9,6 @@ public class RestService {
 		@Test
 		public void getResponse(){
 			RestMethods rest =  new RestMethods();
-			rest.get();
+			//rest.get();
 		}
 }

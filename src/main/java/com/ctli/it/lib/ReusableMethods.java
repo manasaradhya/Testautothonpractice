@@ -20,11 +20,8 @@ import au.com.bytecode.opencsv.CSVWriter;
 public class ReusableMethods extends BaseClass{
 	
 	public ReusableMethods(WebDriver driver, ExtentTest testReport){
-		super(driver, testReport);
-		
-		
+		super(driver, testReport);	
 	}
-
 	  public void clickdate(String inputDate){
 		    WebElement ele =driver.findElement(By.id("DepartDate"));
 		    ele.click();

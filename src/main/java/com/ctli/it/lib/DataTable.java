@@ -218,13 +218,7 @@ public static String[] getAllSheets(String filePath){
 	           cellText = cal.get(Calendar.MONTH)+1 + "/" +
 	                      cal.get(Calendar.DAY_OF_MONTH) + "/" +
 	                      cellText;
-	           
-	 
-
-	         }
-
-		  
-		  
+	         }	  
 		  return cellText;
 	  }else if(cell.getCellType()==Cell.CELL_TYPE_BLANK)
 	      return "";

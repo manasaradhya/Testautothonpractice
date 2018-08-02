@@ -12,6 +12,7 @@ import com.gargoylesoftware.htmlunit.WebWindowNotFoundException;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import flex.messaging.util.Assert;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -72,7 +73,7 @@ public class NaukriPage extends MobileBaseClass {
 		}
 		click(popupCancel);
 		switchWebView();
-
+		org.testng.Assert.fail();
 		tbx_SearchJob.click();
 		System.out.println("seach jobs");
 		checkPageIsReady();

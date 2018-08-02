@@ -11,8 +11,5 @@ public class BookMyShowTestCase extends TestNgInitialization {
 	{
 	BookMyShowPage bm=new BookMyShowPage(mobiledriver, testReport);
 	//bm.completeScenario();
-	
-	
 	}
-
 }

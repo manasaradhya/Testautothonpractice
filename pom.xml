@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ctli.it</groupId>
-  <artifactId>TsetAutothon</artifactId>
+  <artifactId>Autothon-2018</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>TestAutothon</name>
+  <name>Autothon-2018</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -41,10 +41,6 @@
 			</plugin>
 		</plugins>
 	</build>
-  
-  
-  
-  
 
   <dependencies>
     <dependency>

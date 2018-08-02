@@ -12,7 +12,7 @@ public class LoginTestCase  extends TestNgInitialization{
 	public void testcase() throws InterruptedException
 	{
 //		LoginPage lp= new LoginPage(driver);
-		//LoginPage lp= new LoginPage(driver,testReport);
+//		LoginPage lp= new LoginPage(driver,testReport);
 //		
 //		lp.demo();
 //		

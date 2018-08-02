@@ -1,9 +1,12 @@
 package com.ctli.it.lib;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -21,6 +24,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.xml.XmlTest;
 
+import com.ctli.it.restassured.RestMethods;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -40,9 +44,43 @@ public class TestNgInitialization implements AutomationConstants {
 		 String extentConfigFile=System.getProperty("user.dir")+"\\Resources\\Config.xml";
 		  extent=new ExtentReports(reportFilePath, true);
 		  extent.loadConfig(new File(extentConfigFile));  
+		 /* RestMethods r = new RestMethods();
+		  r.getResponse();*/
 	}
-
+	
 	@BeforeMethod
+	
+	public WebDriver initializeDriver() throws IOException
+	{
+	                
+	Properties prop= new Properties();
+	FileInputStream fis=new FileInputStream("C:\\Users\\ab71711\\Automation_testathon\\Final_10Night\\Final_10Night\\CTLI_HAMPS\\Resources\\TestData.properties");
+
+	prop.load(fis);
+	String browserName=prop.getProperty("browser");
+	System.out.println(browserName);
+
+	if(browserName.equals("chrome"))
+	{
+	                System.setProperty("webdriver.chrome.driver", "C:\\Users\\AB71711\\chromedriver.exe");
+	                driver= new ChromeDriver();
+	                                //execute in chrome driver                
+	}
+	else if (browserName.equals("firefox"))
+	{
+	                driver= new FirefoxDriver();
+                //firefox code
+	}
+	else if (browserName.equals("IE"))
+	{
+//	            IE code
+	}
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	return driver;
+	}
+	
+	
+	//@BeforeMethod
 	public void launchApp(Method method, XmlTest test) throws Exception {
 		
 		testReport = extent.startTest((this.getClass().getSimpleName() + "::"  +method.getName()),method.getName()); 
@@ -122,14 +160,13 @@ public class TestNgInitialization implements AutomationConstants {
 		}
 
 	}
-	@AfterMethod
+	//@AfterMethod
 	public void closeApp(Method method, XmlTest test, ITestResult result)
 	{
 		 String browser = test.getParameter("browser");
 
 
-	/*	if(result.isSuccess()){
->>>>>>> branch 'master' of https://github.com/pratim09/CTLI_HAMPS.git
+/*	if(result.isSuccess()){
 			System.out.println("pass");  
 		}else{
 			 if(browser.equalsIgnoreCase("ff")||browser.equalsIgnoreCase("gc")||browser.equalsIgnoreCase("ie")){
@@ -141,17 +178,14 @@ public class TestNgInitialization implements AutomationConstants {
 				 mbClass.getPageScreenShot();
 				 System.out.println("Successfully captured a screenshot");
 			 }
-			
-*/
+		}*/
 		  if(browser.equalsIgnoreCase("ff")||browser.equalsIgnoreCase("gc")||browser.equalsIgnoreCase("ie")){
 			  driver.quit();
 		  }else if (browser.equalsIgnoreCase("appium")) {
-			mobiledriver.close();
-		}
+			mobiledriver.close();	
+		  }
 		
 	}
-	
-	
 	  @AfterSuite
 	  public void afterSuite( XmlTest test){
 		
